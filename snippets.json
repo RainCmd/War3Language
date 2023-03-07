@@ -1,0 +1,36 @@
+{
+	"loop循环": {
+		"prefix": "loop",
+		"body": [
+			"loop",
+			"exitwhen $1",
+			"endloop"
+		],
+		"description": "loop 循环"
+	},
+	"function": {
+		"prefix": "function",
+		"body": [
+			"function $1 takes nothing returns nothing",
+			"$2",
+			"endfunction"
+		],
+		"description": "函数"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if $1 then",
+			"$2",
+			"endif"
+		],
+		"description": "条件语句"
+	},
+	"elseif": {
+		"prefix": "elseif",
+		"body": [
+			"elseif $1 then"
+		],
+		"description": "条件语句"
+	}
+}

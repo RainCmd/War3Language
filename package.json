@@ -1,0 +1,62 @@
+{
+    "name": "war3-jass",
+    "displayName": "魔兽争霸3 jass",
+    "description": "对魔兽争霸3 jass提供关键字高亮和代码格式化功能以及简单的定义查找功能",
+    "version": "0.0.2",
+    "publisher": "渴望蓝天",
+    "engines": {
+      "vscode": "^1.28.0"
+    },
+    "license": "MIT",
+    "icon": "images/war3.png",
+    "categories": [
+      "Programming Languages",
+      "Formatters"
+    ],
+    "activationEvents": [
+      "onLanguage:jass"
+    ],
+    "main": "./out/extension",
+    "scripts": {
+      "编译": "tsc -b",
+      "安装依赖": "npm install",
+      "打包": "vsce package"
+    },
+    "devDependencies": {
+      "@types/node": "^14.18.29",
+      "@types/vscode": "^1.28.0",
+		  "typescript": "^4.8.4"
+    },
+    "contributes": {
+      "languages": [
+        {
+          "id": "jass",
+          "extensions": [
+            ".j", ".ai"
+          ],
+          "aliases": [
+            "jass"
+          ],
+          "icon": {
+            "dark": "./images/war3.png",
+            "light": "./images/war3.png"
+          },
+          "configuration": "./language-configuration.json"
+        }
+      ],
+      "snippets": [
+          {
+              "language": "jass",
+              "path": "./snippets.json"
+          }
+      ],
+      "grammars": [
+        {
+            "language": "jass",
+            "scopeName": "source.rain",
+            "path": "./syntaxes/rain.tmLanguage.json"
+        }
+      ]
+    }
+  }
+  
